@@ -3,6 +3,7 @@ import TextInput from '../TextInput/TextInput';
 import Button from '../Button/Button';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
+import { searchCard } from '../../redux/store';
 
 const SearchForm = () => {
 	const dispatch = useDispatch();
@@ -11,7 +12,7 @@ const SearchForm = () => {
 	const searchByString = (e) => {
 		e.preventDefault();
 		console.log(searchString);
-		dispatch({ type: 'SEARCH', payload: searchString });
+		dispatch(searchCard(searchString));
 	};
 
 	return (
