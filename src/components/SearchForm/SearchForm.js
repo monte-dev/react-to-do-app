@@ -11,8 +11,8 @@ const SearchForm = () => {
 
 	const searchByString = (e) => {
 		e.preventDefault();
-		console.log(searchString);
 		dispatch(searchCard(searchString));
+		setSearchString('');
 	};
 
 	return (
@@ -28,4 +28,5 @@ const SearchForm = () => {
 		</form>
 	);
 };
+
 export default SearchForm;
