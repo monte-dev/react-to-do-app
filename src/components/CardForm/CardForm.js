@@ -20,6 +20,7 @@ const CardForm = (props) => {
 			<TextInput
 				value={title}
 				onChange={(e) => setTitle(e.target.value)}
+				placeholder=""
 			/>
 			<Button>Add card</Button>
 		</form>
