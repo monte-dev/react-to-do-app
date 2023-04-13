@@ -9,6 +9,9 @@ export const getFilteredCards = ({ cards, searchStr }, columnId) =>
 			card.columnId === columnId && strContains(card.title, searchStr)
 	);
 
+export const getFavoriteCards = ({ cards, isFavorite }, columns) =>
+	cards.filter((card) => card.isFavorite);
+
 export const getAllColumns = (state) => state.columns;
 export const getListById = ({ lists }, listId) =>
 	lists.find((list) => list.id === listId);
